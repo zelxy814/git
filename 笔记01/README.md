@@ -81,6 +81,9 @@
 - `git branch dev`
     + 创建了一个dev分支
     + 在刚创建时dev分支里的东西和master分支里的东西是一样的
+    + 切换到新分支：`git checkoutdev`
+    + 然后，上面两个命令也可以合成为一个命令：
+      `git checkout -b dev`  
 
 ### 切换分支
 - `git checkout dev`

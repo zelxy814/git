@@ -109,3 +109,18 @@
  ## git pull 与 git clone
  + 从远程服务器克隆一个一模一样的版本库到本地,复制的是整个版本库，叫做clone.
  + 从远程服务器获取到一个branch分支的更新到本地，并更新本地库，叫做pull.
+ 
+ ```
+ git remote add origin [地址]
+ git checkout -b dev
+ git checkout -b setData
+ git status 
+ git add ./
+ git commit -m "xx"
+ git checkout dev
+ git merge setData --no-ff
+ :q
+ git push origin dev
+ 
+ 
+ ```

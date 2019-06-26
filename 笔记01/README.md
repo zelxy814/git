@@ -96,6 +96,8 @@
     + 合并分支内容,把当前分支与指定的分支(dev),进行合并
     + 当前分支指的是`git branch`命令输出的前面有*号的分支
 - 合并时如果有冲突，需要手动去处理，处理后还需要再提交一次.
+- git merge –no-ff 可以保存你之前的分支历史。能够更好的查看 merge历史，以及branch 状态。
+- git merge 则不会显示 feature，只保留单条分支记录。
 
 ### GitHub 
 - https://github.com

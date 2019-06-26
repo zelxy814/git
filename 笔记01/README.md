@@ -27,11 +27,6 @@
     + 配置邮箱:  `git config --global user.email "xm@sina.com"`
 
 
-## 把大象放到冰箱要几步
-1. 打开冰箱门
-2. 放大象
-3. 关上冰箱
-
 ## 把代码存储到.git仓储中
 - 1.把代码放到仓储的门口
     + `git add ./readme.md` 所指定的文件放到大门口
@@ -81,14 +76,10 @@
 - `git branch dev`
     + 创建了一个dev分支
     + 在刚创建时dev分支里的东西和master分支里的东西是一样的
-    + 切换到新分支：`git checkoutdev`
-    + 然后，上面两个命令也可以合成为一个命令：
+    + 切换到新分支：`git checkout dev`
+    + 然后，上面两个命令也可以合成为一个命令，创建一个并切换到新分支：
       `git checkout -b dev`  
-
-### 切换分支
-- `git checkout dev`
-    + 切换到指定的分支,这里的切换到名为dev的分支
-    `git branch` 可以查看当前有哪些分支
+    + `git branch` 可以查看当前有哪些分支
 
 
 ### 合并分支
@@ -96,26 +87,25 @@
     + 合并分支内容,把当前分支与指定的分支(dev),进行合并
     + 当前分支指的是`git branch`命令输出的前面有*号的分支
 - 合并时如果有冲突，需要手动去处理，处理后还需要再提交一次.
-- git merge –no-ff 可以保存你之前的分支历史。能够更好的查看 merge历史，以及branch 状态。
-- git merge 则不会显示 feature，只保留单条分支记录。
-
-### GitHub 
-- https://github.com
-- 不是git,只是一个网站
-- 只不过这个网站提供了允许别通过git上传代码的功能
+- `git merge –-no-ff` 可以保存你之前的分支历史。能够更好的查看 merge历史，以及branch 状态。
+- `git merge` 则不会显示 feature，只保留单条分支记录。
 
 ### 提交代码到github(当作git服务器来用)
 - `git push [地址] master`
  + 示例: `git push https://github.com/huoqishi/test112.git master  master`
  + 会把当前分支的内容上传到远程的master分支上
 
-- `git pull [地址] master`
+ - `git pull [地址] master`
  + 示例: `git pull https://github.com/huoqishi/test112.git master`
- + 会把远程分支的数据得到:(*注意本地-要初始一个仓储!*)
-
-- `git clone [地址]`
- + 会得到远程仓储相同的数据,如果多次执行会覆盖本地内容。  
+ - `git clone [地址]` 
+ + 远程桌面地址 
  - `git remote add origin [远程仓库地址]`
- + 远程桌面地址  
+ + push到远程桌面 
  - `git push -u origin master `
- + push到远程桌面  
+ + 查看本地添加了哪些远程地址
+ - `git remote -v`
+ + 删除本地指定的远程地址
+ - `git remote remove origin`
+ ## git pull 与 git clone
+ + 从远程服务器克隆一个一模一样的版本库到本地,复制的是整个版本库，叫做clone.
+ + 从远程服务器获取到一个branch分支的更新到本地，并更新本地库，叫做pull.

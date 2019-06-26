@@ -121,6 +121,6 @@
  git merge setData --no-ff
  :q
  git push origin dev
- 
+ 删除本地分支： git branch -d setData
  
  ```
